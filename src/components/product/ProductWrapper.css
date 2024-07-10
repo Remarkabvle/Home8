@@ -1,0 +1,49 @@
+.productWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.productCard {
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.productTitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.imgContainer{
+  max-width: 250px;
+}
+
+.productImage {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.productDescription {
+  font-size: 14px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productName {
+  font-size: 14px;
+}
+
+.productPrice {
+  font-size: 14px;
+  font-weight: bold;
+}
