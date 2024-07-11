@@ -5,12 +5,11 @@ import Link from "next/link";
 import { FaCartPlus, FaHeart, FaRegHeart } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleHeart } from '@/lib/features/wishlist/wishlistSlice';
-import "./ProductWrapper.css";
+import "../../components/product/ProductWrapper.css";
 
-const ProductWrapper = ({ data }) => {
-  const productsToShow = data && data.products ? data.products.slice(0, 8) : [];
-  const dispatch = useDispatch();
+const Wishlist = () => {
   const wishlist = useSelector((state) => state.wishlist.value);
+  const dispatch = useDispatch();
 
   const handleCardClick = (e, productId) => {
     const target = e.target;
@@ -30,11 +29,10 @@ const ProductWrapper = ({ data }) => {
   const isLiked = (productId) => wishlist.find((item) => item.id === productId);
 
   return (
-    <>
-      <h1 className="title">Products</h1>
-      <p className="subtitle">Order it for you or for your beloved ones</p>
+    <div>
+      <h1 className="title">Wishlist</h1>
       <div className="productWrapper container">
-        {productsToShow.map((product) => (
+        {wishlist.map((product) => (
           <div
             key={product.id}
             className="productCard"
@@ -77,8 +75,8 @@ const ProductWrapper = ({ data }) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export default ProductWrapper;
+export default Wishlist;
