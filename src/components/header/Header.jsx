@@ -51,6 +51,13 @@ function Header() {
         >
           Wishlist ({wishlist.length})
         </Link>
+        <Link
+          href="/cart"
+          className="navLink"
+          onClick={() => setIsMobile(false)}
+        >
+          Cart 
+        </Link>
       </nav>
       <div className="icons">
         <CiUser className="icon" />
