@@ -88,3 +88,22 @@
   
 
   
+  .header .navLink {
+    position: relative;
+    padding: 0 10px;
+  }
+  
+  .header .wishlistCount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #32a852;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+  }
+  
