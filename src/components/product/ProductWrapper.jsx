@@ -54,7 +54,7 @@ const ProductWrapper = ({ data }) => {
     <>
       {showMessage && <div className="cartMessage">Added to Cart</div>}
       <h1 className="title">Products</h1>
-      <p className="subtitle">Order it for you or for your beloved ones</p>
+      <p className="subtitle">Order it for you or for your beloved ones.</p>
       <div className="productWrapper container">
         {productsToShow.map((product) => (
           <div
